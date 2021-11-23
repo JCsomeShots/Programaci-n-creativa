@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pogramación creativa</title>
+</head>
+<body>
+  <h1>Hello Domestika</h1>  
+  <canvas width = "600" height = "600" ></canvas>
+    <script>
+
+        let canvas = document.querySelector('canvas')
+        let context = canvas.getContext('2d')
+        //  El contenido puede recibir el valor de 2D o 3D
+
+
+        // context.fillStyle = 'blue'
+        // context.fillRect(100,100,400,400) 
+        // fillRect recibira cuatro parametro: X e Y para saber donde comienza el dibujo, luego width y height para saber las dimensiones del dibujo
+        //  esta función crea, colorea y dimensiona el dibujo
+
+        context.linewidth = 4;
+        context.beginPath()
+        //   tenemos que decirle al contexto que debemos crear un rectángulo sin relleñarlo
+        context.rect(100,100,400,400)
+        // le diremos las mismas coordenadas de X,Y, width , height
+        // context.fill()
+        // llenar el contenido de color
+        context.stroke()
+        //llenar el borde de color
+
+
+
+        context.beginPath()
+        context.arc (300,  300, 100, 0 , Math.PI /2)
+        // recibe 5 parametros , el inicio X e Y , el radio , y lo cerrado del circulo
+        context.stroke()
+
+
+        
+    </script>
+</body>
+</html>
